@@ -11,48 +11,23 @@ vars:
 tasks:
     default: task -l
 
-    build:venv:
-        requires: { vars: [A] }
-        cmds:
-        -   >
-            bash util/build-venv.sh 
-            $(pwd)/packages/{{.A}}/requirements.txt
-            $(pwd)/packages/{{.A}}.zip
-        - task: build:action
-        sources:
-        - "packages/{{.A}}/requirements.txt"
-        generates:
-        - "packages/{{.A}}.zip"
-
-    build:action:
-        aliases: [b]
-        requires: { vars: [A] }
-        cmds:
-        -   |
-            FILE=$(basename "{{.A}}")
-            cd packages/{{.A}}
-            zip ../$FILE.zip  * -x requirements.txt
-        sources:
-        - packages/{{.A}}/*
-        generates:
-        - packages/{{.A}}.zip
-
     clean:
+        desc: clean 
         ignore_error: true
         cmds:
-        - rm -v packages/*/*.zip
+        - nuv ide clean
 
     setup: 
         desc: setup Nuvolaris MastroGPT
         cmds:
         -   |
             nuv -version
-            for i in packages/*/*/requirements.txt
-            do pip install -r $i
-            done
             task config
 
     cli: |
+        for i in packages/*/*/requirements.txt
+        do pip install -r $i
+        done
         ipython -i util/init.ipy
     
     serve:

@@ -64,7 +64,7 @@ def extract(text):
         return res
     return res
 
-def main(args):
+def chat(args):
     global AI
     (key, host) = (args["OPENAI_API_KEY"], args["OPENAI_API_HOST"])
     AI = AzureOpenAI(api_version="2023-12-01-preview", api_key=key, azure_endpoint=host)

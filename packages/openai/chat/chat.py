@@ -1,6 +1,6 @@
 #--web true
-#--param OPENAI_API_KEY $OPENAI_API_KEY
 #--param OPENAI_API_HOST $OPENAI_API_HOST
+#--kind python:default
 
 from openai import AzureOpenAI
 import re
@@ -8,7 +8,7 @@ import re
 ROLE = """
 When requested to write code, pick Python.
 When requested to show chess position, always use the FEN notation.
-When showing HTML, always include what is in the body tag, 
+When showing HTML, always include what is in the body tag,
 but exclude the code surrounding the actual content. 
 So exclude always BODY, HEAD and HTML .
 """
@@ -37,7 +37,7 @@ text = Path("util/test/code.txt").read_text()
 """
 def extract(text):
     res = {}
-
+    
     # search for a chess position
     pattern = r'(([rnbqkpRNBQKP1-8]{1,8}/){7}[rnbqkpRNBQKP1-8]{1,8} [bw] (-|K?Q?k?q?) (-|[a-h][36]) \d+ \d+)'
     m = re.findall(pattern, text, re.DOTALL | re.IGNORECASE)

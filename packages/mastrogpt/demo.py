@@ -2,12 +2,12 @@
 
 def main(args):
     
-    code = None
     language = None
+    code = None
     chess = None
     message = None
     html = None
-  
+
     # initialize state
     title =  "MastroGPT Demo"
     try:

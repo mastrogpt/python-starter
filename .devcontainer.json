@@ -1,6 +1,6 @@
 {
 	"name": "python-starter",
-	"image": "ghcr.io/nuvolaris/devcontainer:3.1.0-mastrogpt.2402251039",
+	"image": "ghcr.io/nuvolaris/devcontainer:3.1.0-mastrogpt.2403011942",
 	"mounts": [
 		"source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
 	],
@@ -13,6 +13,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"../../home/nuvolaris/nuvolaris-vscode-extension/",
 				"ms-python.python",
 				"stuart.unique-window-colors",
 				"oderwat.indent-rainbow",

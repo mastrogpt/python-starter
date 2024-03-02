@@ -14,10 +14,7 @@
 		"vscode": {
 			"extensions": [
 				"nuvolaris.nuvolaris-vscode-extension",
-				"ms-python.python",
-				"stuart.unique-window-colors",
-				"oderwat.indent-rainbow",
-				"alefragnani.Bookmarks"
+				"ms-python.python"
 			]
 		}
 	}

@@ -3,7 +3,6 @@ let chat = document.getElementById("chat").contentWindow
 let display = document.getElementById("display").contentWindow
 let base = location.href.replace(/index\.html$/, "")
 
-
 // inizialize the chat buttons
 document.addEventListener("DOMContentLoaded", function() {
     // retrieve index
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             button.textContent = service.name;
             button.onclick = function() {
                 let url = base + "api/my/"+service.url
-                chat.postMessage({name: service.name, url: url})
+                chat.postMessage({name: service.name, type: "chat", url: url})
             };
             let = p = document.createElement("span")
             p.appendChild(button);

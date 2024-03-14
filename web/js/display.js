@@ -2,6 +2,9 @@
 // receive messages and forward to the display method
 window.addEventListener('message', async function(ev) {
     let data = ev.data
+    if(data.type != "chat") {
+        return
+    }
     console.log(data);
     fetch("/api/my/mastrogpt/display", {
         method: 'POST',

@@ -54,6 +54,7 @@ class Invoker {
         let output = data.output
         delete data['output']
         delete data['state']
+        data['type'] = 'chat'
         displayWindow.postMessage(data)
         return output
       })
@@ -69,7 +70,6 @@ function formatDate(date) {
   const m = "0" + date.getMinutes();
   return `${h.slice(-2)}:${m.slice(-2)}`;
 }
-
 
 function appendMessage(name, img, side, text) {
   //   Simple solution for small apps
@@ -121,6 +121,8 @@ msgerForm.addEventListener("submit", event => {
 
 
 window.addEventListener('message', async function (ev) {
+  if(ev.data.type != "chat")
+    return
   console.log(ev);
   invoker = new Invoker(ev.data.name, ev.data.url)
   titleChat.textContent = ev.data.name

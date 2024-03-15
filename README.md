@@ -32,15 +32,11 @@ You are ready to develop!
 
 # Developtment
 
-Use:
+Use from the terminal
 
-- `task devel` to run a local development environment
-- `task deploy` to deploy everything in cloud
-- `task cli`  python REPL for debug
+- `devel` to run a local development environment
+- `deploy` to deploy everything in cloud
 
-# Setup and Config
+You can also use our extension for using it. 
+Click on the "nuvolaris" icon and you have the commands available.
 
-It is executed automatically when you open a terminal, however there are also the following command you can call directly:
-
-- `task setup`: install everything it is needed
-- `task config`:  asks for username and password and builds `.env`

@@ -38,5 +38,5 @@ Use from the terminal
 - `deploy` to deploy everything in cloud
 
 You can also use our extension for using it. 
-Click on the "nuvolaris" icon and you have the commands available.
+ Click on the "nuvolaris" icon and you have the commands available.
 

@@ -9,7 +9,6 @@
 	"runArgs": [
 		"--network=host"
 	],
-	"postStartCommand": "nuv ide setup",
 	"customizations": {
 		"vscode": {
 			"extensions": [

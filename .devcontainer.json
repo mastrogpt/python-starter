@@ -12,7 +12,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"nuvolaris.nuvolaris-vscode-extension@1.0.1",
+				"nuvolaris.nuvolaris-vscode-extension@1.0.2",
 				"ms-python.python"
 			]
 		}

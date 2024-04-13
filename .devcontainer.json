@@ -1,14 +1,13 @@
 {
     "name": "nuvolaris-starter",
-    "image": "ghcr.io/nuvolaris/devcontainer:3.1.0-mastrogpt.2404131327",
+    "image": "ghcr.io/nuvolaris/devcontainer:3.1.0-mastrogpt.2404131430",
     "runArgs": [
         "--init"
     ],
     "customizations": {
         "vscode": {
             "extensions": [
-                "nuvolaris.nuvolaris-vscode-extension",
-	        "ms-python.python"
+                "nuvolaris.nuvolaris-vscode-extension"
             ]
         }
     }
